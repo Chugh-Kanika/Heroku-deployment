@@ -7,7 +7,7 @@ from app import app
 from app import server
 
 # Connect to your app pages
-from apps import app0, app1new, app2, app3
+from apps import app0,app1new,app2,app3
 
 app.layout = html.Div(children=[
     html.H1(children='Climate Change Dashboard', style={
@@ -26,7 +26,7 @@ app.layout = html.Div(children=[
     ], className="row"),
     html.Div(id='page-content', children=[])
 ])
-
+])
 
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
