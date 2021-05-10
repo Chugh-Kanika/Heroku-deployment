@@ -13,7 +13,7 @@ from app import server
 dropdown = dbc.DropdownMenu(
     children=[
         dbc.DropdownMenuItem("Top 5 Nations", href="/app0"),
-        dbc.DropdownMenuItem("Emissions Level & Demographics", href="/app1"),
+        dbc.DropdownMenuItem("Emissions Level & Demographics", href="/app1new"),
         dbc.DropdownMenuItem("Energy Usage", href="/app2"),
         dbc.DropdownMenuItem("Understand Correlation", href="/app3"),
     ],
@@ -57,7 +57,7 @@ navbar = dbc.Navbar(
 def display_page(pathname):
     if pathname == '/apps/app0':
         return app0.layout
-    elif pathname == '/apps/app1':
+    elif pathname == '/apps/app1new':
         return app1.layout
     elif pathname == '/apps/app2':
         return app2.layout
