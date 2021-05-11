@@ -3,14 +3,15 @@ import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
 import plotly.express as px
-
+import pathlib
+from pathlib import Path
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 from app import app
 
 # get relative data folder
-PATH = pathlib.Path(__file__).parent
+PATH = Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 
 df_flat = pd.read_csv(DATA_PATH.joinpath('Dashboard_file preprocessed df.csv'))

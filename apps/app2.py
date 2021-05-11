@@ -3,24 +3,23 @@ import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
 import plotly.express as px
-
+import pathlib
+from pathlib import Path
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
 from app import app
 
 # get relative data folder
-PATH = pathlib.Path(__file__).parent
+PATH = Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
 
 df_flat = pd.read_csv(DATA_PATH.joinpath('Dashboard_file preprocessed df.csv'))
-
 # Here the code to preprocess the dataframe can be added. For this notebook preprocessing is done in the previous steps.
 
 
 # Here the code to preprocess the dataframe can be added. For this notebook preprocessing is done in the previous steps.
-df_flat = pd.read_csv('Dashboard_file preprocessed df.csv')
+
 available_country = df_flat['Country Name'].unique()
 
 # Below code defines the layout of the dashboard. It defines how the dashboard will appear as a web page.
