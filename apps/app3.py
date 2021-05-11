@@ -3,6 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
 import plotly.express as px
+from dash.dependencies import Input, Output
 import pathlib
 from pathlib import Path
 
@@ -21,7 +22,7 @@ df_flat = pd.read_csv(DATA_PATH.joinpath('Dashboard_file preprocessed df.csv'))
 available_indicators = df_flat['Series Name'].unique()
 
 # This code will create
-app.layout = html.Div(children=[
+layout = html.Div(children=[
     html.H1(children='Climate Change Dashboard', style={
         'textAlign': 'center', 'fontSize': 36}), html.Div(children='''How do Emissions level, Demographic information, Energy
         usage correlate to each other''', style={'textAlign': 'center', 'fontSize': 24}),

@@ -8,13 +8,14 @@ from app import server
 
 # Connect to your app pages
 from apps import app0,app1new,app2,app3
-
+test_png = 'climate change.png'
+test_base64 = base64.b64encode(open(climate change.png, 'rb').read()).decode('ascii')
 app.layout = html.Div(children=[
     html.H1(children='Climate Change Dashboard', style={
         'textAlign': 'center'
     }),
 
-    html.Img(src="/assets/climate change.png", height="30px"),
+    html.Img(src='data:image/png;base64,{}'.format(test_base64)),
 
     html.Div([
     dcc.Location(id='url', refresh=False),

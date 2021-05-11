@@ -3,6 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
 import plotly.express as px
+from dash.dependencies import Input, Output
 import pathlib
 from pathlib import Path
 
@@ -27,7 +28,7 @@ available_country = df_flat['Country Name'].unique()
 
 # Dash Core Component - Dropdown and Graph is being used where Time-series graph will update based on country selected
 
-app.layout = html.Div(children=[
+layout = html.Div(children=[
     html.H1(children='Climate Change Dashboard', style={
         'textAlign': 'center', 'fontSize': 36}),
     html.Div(children='''How do countries around the world compare for Greenhouse Gases emissions, Population 

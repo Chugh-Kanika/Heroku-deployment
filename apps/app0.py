@@ -3,6 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
 import plotly.express as px
+from dash.dependencies import Input, Output
 import pathlib
 from pathlib import Path
 
@@ -37,7 +38,7 @@ fig2 = px.bar(top52.sort_values(by=['value']), x='Country Name', y='value',
 fig2.update_xaxes(fixedrange=True)
 
 # Below code defines the layout of the dashboard. It defines how the dashboard will appear as a web page.
-app.layout = html.Div(children=[
+layout = html.Div(children=[
     html.H1(children='Climate Change Dashboard', style={
         'textAlign': 'center'
     }),
