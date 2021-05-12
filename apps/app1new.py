@@ -30,13 +30,13 @@ available_country = df_flat['Country Name'].unique()
 
 layout = html.Div(children=[
     html.H1(children='Climate Change Dashboard', style={
-        'textAlign': 'center', 'fontSize': 36}),
+        'textAlign': 'center', 'fontSize': 36, 'color': '#87d8fa'}),
     html.Div(children='''How do countries around the world compare for Greenhouse Gases emissions, Population 
-                                         and GDP''', style={'textAlign': 'center', 'fontSize': 24})
+                                         and GDP''', style={'textAlign': 'center', 'fontSize': 24,'color': '#87d8fa'})
     ,
     html.Div(children='''
       Select two countries for comparative trend analysis across the years''', style={
-        'textAlign': 'center'})
+        'textAlign': 'center','color': '#87d8fa'})
     ,
 
     html.Div([
