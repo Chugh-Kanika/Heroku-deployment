@@ -39,13 +39,10 @@ fig2.update_xaxes(fixedrange=True)
 
 # Below code defines the layout of the dashboard. It defines how the dashboard will appear as a web page.
 layout = html.Div(children=[
-    html.H1(children='Climate Change Dashboard', style={
-        'textAlign': 'center'
-    }),
+    
     html.Div(children=''' Top 5 nations for
-      CO2 emissions (kt)and GDP (current US$)''', style={
-        'textAlign': 'center'
-    }),
+      CO2 emissions (kt)and GDP (current US$)''', style={'textAlign': 'center', 'fontSize': 22,'color': '#0858b8'}
+    ),
     html.Div([
                 html.Div([dcc.Graph(id='bar-chart1', figure=fig)], style={'width': '49%', 'display': 'inline-block'}),
                 html.Div([dcc.Graph(id='bar-chart2', figure=fig2)], style={'width': '49%', 'display': 'inline-block'})
