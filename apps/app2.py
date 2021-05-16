@@ -30,14 +30,12 @@ available_country = df_flat['Country Name'].unique()
 # Dash Core Component - Dropdown and Graph is being used where Time-series graph will update based on country selected
 
 layout = html.Div(children=[
-    html.H1(children='Climate Change Dashboard', style={
-        'textAlign': 'center', 'fontSize': 36}),
+    
     html.Div(children='''How do countries around the world compare for  Energy Usage(Fossil Fuel & Renewables) and Electricity production from various
-      sources including Renewables''', style={'textAlign': 'center', 'fontSize': 24})
+      sources including Renewables''', style={'textAlign': 'center', 'fontSize': 22, 'color': '#0858b8'})
     ,
     html.Div(children='''
-      Select two countries for comparative trend analysis across the years''', style={
-        'textAlign': 'center'})
+      Select two countries for comparative trend analysis across the years''', style={'textAlign': 'center', 'fontSize': 18, 'color': '#0858b8'})
 
     ,
 
