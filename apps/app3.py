@@ -23,9 +23,8 @@ available_indicators = df_flat['Series Name'].unique()
 
 # This code will create
 layout = html.Div(children=[
-    html.H1(children='Climate Change Dashboard', style={
-        'textAlign': 'center', 'fontSize': 36}), html.Div(children='''How do Emissions level, Demographic information, Energy
-        usage correlate to each other''', style={'textAlign': 'center', 'fontSize': 24}),
+     html.Div(children='''How do Emissions level, Demographic information, Energy
+        usage correlate to each other''', style={'textAlign': 'center', 'fontSize': 22, 'color': '#0858b8'}),
 
     html.Div(children='''
       Select parameters for Scatter Plot from the Dropdown. On the Left is the x-axis parameter and on the right is y -axis
