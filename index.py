@@ -23,8 +23,11 @@ app.layout = html.Div(children=[
     dcc.Location(id='url', refresh=False),
     html.Div([
         dcc.Link('Top 5 Nations | ', href='/apps/app0'),
+        html.Br(),
         dcc.Link('Emissions Level & Demographics | ', href='/apps/app1new'),
+        html.Br(),
         dcc.Link('Energy Usage | ', href='/apps/app2'),
+        html.Br(),
         dcc.Link('Understanding Correlation', href='/apps/app3')
     ], className="row",style={'textAlign': 'center', 'fontSize': 22,'color': '#0858b8'}),
     html.Div(id='page-content', children=[])
@@ -43,7 +46,7 @@ def display_page(pathname):
     elif pathname == '/apps/app3':
         return app3.layout
     else:
-        return "404 Page Error! Please choose a link"
+        return "Please choose a link"
 
 
 if __name__ == '__main__':
