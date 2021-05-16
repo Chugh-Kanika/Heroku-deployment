@@ -34,8 +34,7 @@ layout = html.Div(children=[
                                          and GDP''', style={'textAlign': 'center', 'fontSize': 22,'color': '#0858b8'})
     ,
     html.Div(children='''
-      Select two countries for comparative trend analysis across the years''', style={
-        'textAlign': 'center','color': '#87d8fa'})
+      Select two countries for comparative trend analysis across the years''', style={'textAlign': 'center', 'fontSize': 18, 'color': '#0858b8'})
     ,
 
     html.Div([
