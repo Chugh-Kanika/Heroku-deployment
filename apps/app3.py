@@ -79,8 +79,8 @@ layout = html.Div(children=[
         )
     ], style={'width': '49%', 'display': 'inline-block', 'padding': '0 20'}),
     html.Div([
-        dcc.Graph(id='x-time-series'),
-        dcc.Graph(id='y-time-series'),
+        dcc.Graph(id='a3-x-time-series'),
+        dcc.Graph(id='a3-y-time-series'),
     ], style={'display': 'inline-block', 'width': '49%'}),
 
     html.Div(dcc.Slider(
@@ -141,7 +141,7 @@ def create_time_series(dff, axis_type, title):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series', 'figure'),
+    dash.dependencies.Output('a3-x-time-series', 'figure'),
     [dash.dependencies.Input('crossfilter-indicator-scatter', 'hoverData'),
      dash.dependencies.Input('crossfilter-xaxis-column', 'value'),
      dash.dependencies.Input('crossfilter-xaxis-type', 'value')])
@@ -154,7 +154,7 @@ def update_y_timeseries(hoverData, xaxis_column_name, axis_type):
 
 
 @app.callback(
-    dash.dependencies.Output('y-time-series', 'figure'),
+    dash.dependencies.Output('a3-y-time-series', 'figure'),
     [dash.dependencies.Input('crossfilter-indicator-scatter', 'hoverData'),
      dash.dependencies.Input('crossfilter-yaxis-column', 'value'),
      dash.dependencies.Input('crossfilter-yaxis-type', 'value')])

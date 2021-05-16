@@ -59,20 +59,20 @@ layout = html.Div(children=[
     html.Div([
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
         ),
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series1')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series1')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series1')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series1')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
@@ -80,50 +80,50 @@ layout = html.Div(children=[
 
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series3')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series3')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series3')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series3')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
         ),
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series4')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series4')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series4')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series4')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
         ),
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series5')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series5')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series5')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series5')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
         ),
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series6')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series6')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series6')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series6')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
         ),
         html.Div([
             html.Div([
-                dcc.Graph(id='x-time-series7')], style={'width': '49%', 'display': 'inline-block'}),
+                dcc.Graph(id='a1-x-time-series7')], style={'width': '49%', 'display': 'inline-block'}),
 
             html.Div([
-                dcc.Graph(id='y-time-series7')], style={'width': '49%', 'display': 'inline-block'})],
+                dcc.Graph(id='a1-y-time-series7')], style={'width': '49%', 'display': 'inline-block'})],
             style={'borderBottom': 'thin lightgrey solid',
                    'backgroundColor': 'rgb(250, 250, 250)',
                    'padding': '10px 5px'}
@@ -135,7 +135,7 @@ layout = html.Div(children=[
 # Below code defines the callback in the dashboard, callbacks add the interactivity in dashboard,
 # Input value is from the dropdown and output is the time series chart
 @app.callback(
-    dash.dependencies.Output('x-time-series', 'figure'), dash.dependencies.Output('y-time-series', 'figure'),
+    dash.dependencies.Output('a1-x-time-series', 'figure'), dash.dependencies.Output('a1-y-time-series', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
@@ -163,7 +163,7 @@ def update_charts(country1, country2):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series1', 'figure'), dash.dependencies.Output('y-time-series1', 'figure'),
+    dash.dependencies.Output('a1-x-time-series1', 'figure'), dash.dependencies.Output('a1-y-time-series1', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
@@ -192,7 +192,7 @@ def update_charts(country1, country2):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series3', 'figure'), dash.dependencies.Output('y-time-series3', 'figure'),
+    dash.dependencies.Output('a1-x-time-series3', 'figure'), dash.dependencies.Output('a1-y-time-series3', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
@@ -220,7 +220,7 @@ def update_charts(country1, country2):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series4', 'figure'), dash.dependencies.Output('y-time-series4', 'figure'),
+    dash.dependencies.Output('a1-x-time-series4', 'figure'), dash.dependencies.Output('a1-y-time-series4', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
@@ -246,7 +246,7 @@ def update_charts(country1, country2):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series5', 'figure'), dash.dependencies.Output('y-time-series5', 'figure'),
+    dash.dependencies.Output('a1-x-time-series5', 'figure'), dash.dependencies.Output('a1-y-time-series5', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
@@ -272,7 +272,7 @@ def update_charts(country1, country2):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series7', 'figure'), dash.dependencies.Output('y-time-series7', 'figure'),
+    dash.dependencies.Output('a1-x-time-series7', 'figure'), dash.dependencies.Output('a1-y-time-series7', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
@@ -298,7 +298,7 @@ def update_charts(country1, country2):
 
 
 @app.callback(
-    dash.dependencies.Output('x-time-series6', 'figure'), dash.dependencies.Output('y-time-series6', 'figure'),
+    dash.dependencies.Output('a1-x-time-series6', 'figure'), dash.dependencies.Output('a1-y-time-series6', 'figure'),
     dash.dependencies.Input('country1', 'value'),
     dash.dependencies.Input('country2', 'value')
 )
